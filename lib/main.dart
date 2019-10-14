@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:easy_localization/easy_localization.dart';
 
-// Encapsulate with EasyLocalization
+// Wrap with EasyLocalization
 void main() => runApp(EasyLocalization(child: MyApp()));
 
 // Configure supported locales
-var supportedLocales = [
+final supportedLocales = [
   Locale('en', 'US'),
   Locale('en', 'GB'),
   Locale('fr', 'FR'),
@@ -75,7 +75,7 @@ class _MyHomePageState extends State<MyHomePage> {
             // Display sub key
             Text(AppLocalizations.of(context).tr('contact.email')),
 
-            // Display title with the correct locale
+            // If the key does not exist, AppLocalizations will return the key name 'keyOnlyExistInFRJson'
             Text(AppLocalizations.of(context).tr('keyOnlyExistInFRJson')),
           ],
         ),
