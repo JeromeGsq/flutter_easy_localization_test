@@ -1,0 +1,8 @@
+{
+    "title": "Hello world App from GB",
+    "hello": "Hello",
+    "contact": {
+        "phone": "phone",
+        "email": "email"
+    }
+}

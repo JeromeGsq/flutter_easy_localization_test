@@ -1,0 +1,9 @@
+{
+    "title": "Bonjour depuis FR",
+    "hello": "Bonjour",
+    "contact": {
+        "phone": "téléphone",
+        "email": "courriel"
+    },
+    "keyOnlyExistInFRJson": "Cette clé n'existe que dans le fichier fr-FR.json"
+}
