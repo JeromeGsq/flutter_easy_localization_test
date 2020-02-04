@@ -1,6 +1,6 @@
 {
     "title": "Hello world App from US",
-    "hello": "Hello",
+    "hello": "Hello {}",
     "contact": {
         "phone": "phone",
         "email": "e-m@il"

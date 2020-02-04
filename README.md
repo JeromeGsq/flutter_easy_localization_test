@@ -19,7 +19,7 @@ Project
 ```json
 {
     "title": "Bonjour depuis FR",
-    "hello": "Bonjour",
+    "hello": "Bonjour {}",
     "contact": {
         "phone": "téléphone",
         "email": "courriel"
@@ -86,6 +86,9 @@ class MyApp extends StatelessWidget {
 // Display title with the correct locale
 Text(AppLocalizations.of(context).tr('title')),
 
+// Display hello with var with the correct locale
+Text(AppLocalizations.of(context).tr('hello', args: ['Dash']),
+
 // Display sub key
 Text(AppLocalizations.of(context).tr('contact.email')),
 
@@ -110,6 +113,7 @@ Pro/Cons
 - Classic JSON file format
 - You can sort values with subkeys like `contact.phone`
 - Don't need to regenerate files or execute command lines
+- You can download translations files from a backend
 
 **Cons:** 
 - Must declare each json files in the pubspec.yaml as assets

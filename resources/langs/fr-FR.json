@@ -1,6 +1,6 @@
 {
     "title": "Bonjour depuis FR",
-    "hello": "Bonjour",
+    "hello": "Bonjour {}",
     "contact": {
         "phone": "téléphone",
         "email": "courriel"

@@ -24,7 +24,8 @@ class MyApp extends StatelessWidget {
         localizationsDelegates: [
           GlobalMaterialLocalizations.delegate,
           GlobalWidgetsLocalizations.delegate,
-          EasylocaLizationDelegate(locale: data.locale, path: 'resources/langs'),
+          EasylocaLizationDelegate(
+              locale: data.locale, path: 'resources/langs'),
         ],
         supportedLocales: supportedLocales,
         locale: data.savedLocale,
@@ -51,8 +52,11 @@ class _MyHomePageState extends State<MyHomePage> {
   int localIndex = 0;
   void _switchLanguage() {
     setState(() {
-      localIndex = localIndex >= supportedLocales.length - 1 ? 0 : localIndex + 1;
-      EasyLocalizationProvider.of(context).data.changeLocale(supportedLocales[localIndex]);
+      localIndex =
+          localIndex >= supportedLocales.length - 1 ? 0 : localIndex + 1;
+      EasyLocalizationProvider.of(context)
+          .data
+          .changeLocale(supportedLocales[localIndex]);
     });
   }
 
@@ -71,6 +75,11 @@ class _MyHomePageState extends State<MyHomePage> {
 
             // Display title with the correct locale
             Text(AppLocalizations.of(context).tr('title')),
+
+            // Display hello with var with the correct locale
+            Text(
+              AppLocalizations.of(context).tr('hello', args: ['Dash']),
+            ),
 
             // Display sub key
             Text(AppLocalizations.of(context).tr('contact.email')),
